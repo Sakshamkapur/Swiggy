@@ -1,38 +1,202 @@
-.App {
-  text-align: center;
+.container{
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  margin: 2% auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container .row{
+  margin-bottom: 40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sections{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-left: 20px;
+  width: 900px;
+}
+.sections .section{
+  border-bottom: 1px solid #ccc;
+  margin-top: 20px;
+}
+#section4{
+  border: none;
+}
+.section .sectiontitle{
+  font-weight: 600;
+  font-size: 28px;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 20px;
+  text-transform: capitalize;
+}
+.section .more{
+  margin: 20px 20px 57px;
+  width: 254px;
+  border: 2px solid #db7c38;
+  color: #db7c38;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.bold{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 17px;
+  font-weight: 600;
+  display: block;
+  color: inherit;
+  cursor: pointer;
+  text-transform: capitalize;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.light{
+  font-size: 13px;
+  margin-top: 4px;
+  color: #93959f;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 300;
 }
+
+.sidebar{
+  list-style: none;
+  width: 200px;
+  height: fit-content;
+  padding: 20px 30px 20px 0;
+  background: #fff;
+  box-shadow: 0 1px 10px 0 rgba(40,44,63,.08);
+  border-radius: 4px;
+  overflow: hidden;
+  position: sticky;
+  top: 20px;
+}
+.sidebar li{
+  padding: 20px 20px 10px 20px;
+  width: auto;
+}
+.sidebar li:hover,.sidebar li:hover p,.sidebar .active,.sidebar .active p{
+  color: #fff;
+  background-color: #db7c38;
+}
+
+/* card css start */
+
+.card{
+  padding: 20px 20px 57px;
+  border: 1px solid #fff;
+  contain: content;
+  position: relative;
+}
+
+.card .cardbody{
+  position: relative;
+  width: 254px;
+}
+
+.card .media{
+  background: #eef0f5;
+  width: 254px;
+  height: 160px;
+  position: relative;
+}
+
+.card .media img{
+  width: 254px;
+  height: 160px;
+  object-fit: cover;
+}
+.card .about{
+  margin-top: 14px;
+}
+
+.card .about .title{
+  font-size: 17px;
+  font-weight: 500;
+  word-break: break-word;
+}
+.card .about .type{
+  color: #686b78;
+  font-size: 13px;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.card .details{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 12px;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #535665;
+}
+.card .details .review{
+  height: 20px;
+  width: 43px;
+  padding: 0 5px;
+  font-weight: 400;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.card .cardfooter{
+  color: #686b78;
+  font-size: 13px;
+  visibility: hidden;
+  border-top: 1px solid #e9e9eb;
+  padding-top: 14px;
+  margin-top: 14px;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 14px;
+}
+.card .cardfooter span{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  color: #5d8ed5;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+}
+.card .review .ratingnumber{
+  color: #fff;
+  height: 20px;
+  width: 43px;
+  padding: 0 5px;
+  font-weight: 400;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  justify-content: space-between;
+}
+.card:hover{
+  border-color: #d3d5df;
+  box-shadow: 0 4px 7px 0 rgba(218,220,230,.6);
+}
+.card:hover .cardfooter{
+  visibility: visible;
+}
+/* card css end */
